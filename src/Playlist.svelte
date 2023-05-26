@@ -1,9 +1,9 @@
-<script>
-    let playlistName = '';
+<!--<script>
+      let playlistName = '';
   
     async function createPlaylist() {
       try {
-        const response = await fetch('/api/songs', {  // Ajusta la ruta a '/api/songs'
+        const response = await fetch('/api/playlists/{playlistId}/songs', {  // Ajusta la ruta a '/api/songs'
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -26,11 +26,17 @@
       }
     }
   </script>
-  
-  <h2>Crear Playlist</h2>
+ 
+    <div class="container">
+    <h2>Crear Playlist</h2>
   
   <form on:submit|preventDefault={createPlaylist}>
     <input type="text" bind:value={playlistName} placeholder="Nombre de la playlist">
     <button type="submit">Crear playlist</button>
   </form>
+  </div>
+
+  <style>
   
+
+  </style>-->

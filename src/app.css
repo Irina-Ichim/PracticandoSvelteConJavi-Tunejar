@@ -6,9 +6,10 @@
 
 
 body {
-  background-image: url('../img/fondoweb.png');
+  /*background-image: url('../img/fondoweb.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
+  background: black;
 }
 /* global.css */
 
@@ -18,11 +19,12 @@ header {
   justify-content: space-between;
   height: 90px;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .logo {
   height: 60px;
-  width: 60px;
+  width: 80px;
   margin-left: 20px;
   border-radius: 20px;
 }
@@ -107,7 +109,7 @@ button:focus {
 
 .song-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   margin-top: 20px;
 }
@@ -119,10 +121,10 @@ button:focus {
 
 .song-card img {
   object-fit: cover;
-  width: 80%;
-  height: 250px;
-  margin-bottom: 10px;
-  border-radius: 20px;
+  width: 70%;
+  height: 200px;
+  margin-bottom: 15px;
+  border-radius: 20%;
   border: 2px solid #ff1493;
   box-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493, 0 0 30px #ff1493, 0 0 40px #ff1493;
 }
@@ -140,7 +142,7 @@ button:focus {
   border-radius: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
-  width: 80%;
+  width: 70%;
   text-align: center;
 
 }
@@ -157,7 +159,7 @@ button:focus {
   border-radius: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
-  width: 80%;
+  width: 70%;
   text-align: center;
 }
 
@@ -167,11 +169,65 @@ button:focus {
  .song-card:hover p {
   opacity: 1;
 }
-
-.playlist-container {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.container {
+  position: relative;
+  background-color: #642245;
+  border: 2px solid #ff1493;
+  box-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493, 0 0 30px #ff1493, 0 0 40px #ff1493;
+  color: white;
+  padding: 5px;
+  border-radius: 20%;
+  opacity: 1; /* Cambiado a 1 para que sea visible por defecto */
+  transition: opacity 0.3s ease;
+  overflow: hidden;
+  width: 200px; /* Modifica el ancho según tu preferencia */
+  height: 200px; /* Modifica el alto según tu preferencia */
+  text-align: center;
+  left: 64%; /* Ajusta la posición horizontal */
+  top: -210px; /* Ajusta la posición vertical */
 }
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.container:hover::after {
+  opacity: 1;
+}
+.container h2 {
+  color: rgb(228, 105, 125);
+  letter-spacing: 2px;
+  background: linear-gradient(to right, pink, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: neonEffect 2s linear infinite alternate;
+  margin-bottom: 10px; /* Agregado margen inferior */
+}
+
+.container input {
+  margin-bottom: 10px; /* Agregado margen inferior */
+  
+}
+
+.container button {
+  margin-top: 10px; /* Agregado margen superior */
+  width: 90px;
+  height:40px;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+

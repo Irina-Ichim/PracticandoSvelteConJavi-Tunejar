@@ -14,7 +14,7 @@
 
   async function createPlaylist() {
     try {
-      const response = await fetch('/api/playlist', {
+      const response = await fetch('/api/playlists/{playlistId}/songs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -42,13 +42,7 @@
     <button>LOGIN</button>
   </header>
 
-  <h2>Crear Playlist</h2>
-
-  <form on:submit|preventDefault={createPlaylist}>
-    <input type="text" bind:value={playlistName} placeholder="Nombre de la playlist">
-    <button type="submit">Crear playlist</button>
-  </form>
-
+ 
   <div class="song-grid">
     {#each songs as song}
     <div class="song-card">
@@ -57,6 +51,14 @@
       <p>{song.singer}</p>
     </div>
     {/each}
+  </div>
+  <div class="container">
+  <h2>Crear Playlist</h2>
+
+  <form on:submit|preventDefault={createPlaylist}>
+    <input type="text" bind:value={playlistName} placeholder="Nombre de la playlist"><br>
+    <button type="submit">Crear playlist</button>
+  </form>
   </div>
 </main>
 
