@@ -1,42 +1,37 @@
-<!--<script>
-      let playlistName = '';
+
+  <script>
+    import { navigate } from 'svelte-routing';
+
+
+  
+    function redirectToAgregarCanciones() {
+      navigate('/agregar-canciones');
+    }
+  
+    let playlistName = '';
   
     async function createPlaylist() {
-      try {
-        const response = await fetch('/api/playlists/{playlistId}/songs', {  // Ajusta la ruta a '/api/songs'
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            name: playlistName
-          })
-        });
-  
-        if (response.ok) {
-          // La playlist se creó con éxito, puedes mostrar un mensaje o realizar alguna acción adicional
-          console.log('La playlist se creó correctamente');
-        } else {
-          // Ocurrió un error al crear la playlist, puedes mostrar un mensaje de error o realizar alguna acción adicional
-          console.error('Error al crear la playlist');
-        }
-      } catch (error) {
-        // Ocurrió un error en la solicitud, puedes mostrar un mensaje de error o realizar alguna acción adicional
-        console.error('Error en la solicitud', error);
-      }
+      // Lógica para crear la playlist
     }
   </script>
- 
+  
+  <main>
+    <!-- Resto del contenido de tu componente principal -->
+  
     <div class="container">
-    <h2>Crear Playlist</h2>
+      <h2>Crear Playlist</h2>
   
-  <form on:submit|preventDefault={createPlaylist}>
-    <input type="text" bind:value={playlistName} placeholder="Nombre de la playlist">
-    <button type="submit">Crear playlist</button>
-  </form>
-  </div>
-
+      <form on:submit|preventDefault={createPlaylist}>
+        <input type="text" bind:value={playlistName} placeholder="Nombre de la playlist">
+        <button type="submit">Crear playlist</button>
+      </form>
+    </div>
+  
+    <button on:click={redirectToAgregarCanciones}>Agregar Canciones</button>
+  
+  </main>
+  
   <style>
+    /* Estilos CSS personalizados */
+  </style>
   
-
-  </style>-->

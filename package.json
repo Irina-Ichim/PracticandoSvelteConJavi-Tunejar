@@ -13,5 +13,8 @@
     "routify": "^1.2.7",
     "svelte": "^3.57.0",
     "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "svelte-routing": "^1.8.9"
   }
 }
