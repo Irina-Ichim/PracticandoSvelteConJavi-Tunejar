@@ -17,25 +17,22 @@
 
   async function createPlaylist() {
     try {
-      const response = await fetch('/api/playlists/{playlistId}/songs', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          name: playlistName
-        })
-      });
+      // Generar un nombre aleatorio para la playlist
+      const randomPlaylistName = `Playlist ${Math.floor(Math.random() * 1000)}`;
+      playlistName = randomPlaylistName;
 
-      if (response.ok) {
-        console.log('La playlist se creó correctamente');
-      } else {
-        console.error('Error al crear la playlist');
-      }
+      // Aquí puedes agregar lógica para enviar la solicitud de creación de la playlist al backend
+      // y agregar las canciones a la playlist recién creada
+
+      // Después de crear la playlist, puedes cerrar el modal
+      toggleModal();
+
+      console.log('La playlist se creó correctamente');
     } catch (error) {
       console.error('Error en la solicitud', error);
     }
   }
+
   
   let showModal = false; // Variable para controlar la visibilidad del modal
 
@@ -82,6 +79,8 @@
       <button class="close-button" on:click={toggleModal}>Cerrar</button>
     </div>
   {/if}
+
+  
 </main>
 
 <style>

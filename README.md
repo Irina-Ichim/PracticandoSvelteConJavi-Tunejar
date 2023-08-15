@@ -50,6 +50,6 @@ TuneJar también te permite iniciar sesión para acceder a funciones adicionales
 ## Contribución
 
 Si deseas contribuir a este proyecto, ¡te damos la bienvenida! Puedes crear un fork del repositorio, realizar tus cambios y enviar un pull request.
-Este proyecto tiene una parte de backend creada con SpringBoot, Gradle y Kotlin
+Este proyecto tiene una parte de backend creada con SpringBoot, Gradle y Kotlin ``https://github.com/Irina-Ichim/PracticandSvelteConJaviBackend-Tunejar.git``
 
 🎶 ¡Disfruta descubriendo nueva música con TuneJar! 🎶
