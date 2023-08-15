@@ -1,4 +1,4 @@
-<!--<script>
+<script>
   import logo from '../img/tunejar-logo.png';
   import { onMount } from 'svelte';
 
@@ -65,9 +65,9 @@
 </main>
 
 <style>
-  /* Estilos CSS personalizados */
-</style>-->
-<script>
+  
+</style>
+<!--<script>
   import logo from '../img/tunejar-logo.png';
   import { onMount } from 'svelte';
   
@@ -134,5 +134,5 @@
 
 <style>
   /* Estilos CSS personalizados */
-</style>
+</style>-->
 
